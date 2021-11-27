@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter";
+    background: #ecf1ff;
+    font-size: 0.95rem;
+}
+.content {
+    position: relative;
+    width: 750px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+.slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*: all 0.75s;*/
+}
+.slider-info {
+    position: absolute;
+    width: auto;
+    z-index: 1;
+    top: 0.75rem;
+    right: -100rem;
+    background: #0135ec;
+    color: #fff;
+    border-radius: 15px 0 0 15px;
+    padding: 0.5rem 0.75rem;
+    transition: 1s;
+}
+.slider-info-active {
+    right: 0rem;
+}
+.slider-image {
+    opacity: 0;
+    max-width: 750px;
+    object-fit: cover;
+    height: 500px;
+    object-fit: cover;
+    transition: 1s;
+}
+.slider-image-active {
+    opacity: 1;
+}
+.btn-chevron {
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    background: #0135ec;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.btn-chevron:hover {
+    top: 49%;
+}
+.left {
+    left: 1rem;
+}
+.right {
+    right: 1rem;
+}
+.indicator {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+.indicator-active {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    background: #0135ec;
+    padding: 0.3rem;
+    transition: 0.5s all;
+    border-radius: 100%;
+}
