@@ -2,9 +2,8 @@ HTMLElement.prototype.hasElement = function(element) {
     const el = document.querySelector(element);
     if (this.contains(el)) {
         return true;
-    }else{
-        return false;
     }
+    return false;
 };
 HTMLElement.prototype.getPositionXY = function() {
     return [this.getBoundingClientRect().x, this.getBoundingClientRect().y];
